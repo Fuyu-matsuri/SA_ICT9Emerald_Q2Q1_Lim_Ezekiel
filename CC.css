@@ -1,0 +1,106 @@
+
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    background-color: brown;
+}
+
+header {
+    background: linear-gradient(90deg, #8F00FF, #5700b6);
+    color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+header h1 {
+    font-size: 2.75rem;
+    font-weight: 700;
+}
+
+header p {
+    font-size: 1.2rem;
+    color: #f8f9fa;
+}
+
+p {
+    color: white;
+}
+
+.image-container {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start; /* Aligns the image to the left */
+}
+
+.large-image {
+    width: 250px; /* Set the desired width */
+    height: auto;
+    border-radius: 15px; /* Optional: Adds a rounded border to the image */
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1); /* Optional: Adds a shadow around the image */
+    transition: transform 0.3s ease;
+}
+
+.large-image:hover {
+    transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+.table {
+    margin-top: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.table-hover tbody tr:hover {
+    background-color: #e0e0e0;
+    transition: background-color 0.3s ease;
+}
+
+.table th, .table td {
+    padding: 20px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.table th {
+    background-color: #6c757d;
+    color: #ffffff;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.table tbody tr {
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+}
+
+.table tbody tr:nth-child(1) { animation-delay: 0.3s; }
+.table tbody tr:nth-child(2) { animation-delay: 0.6s; }
+.table tbody tr:nth-child(3) { animation-delay: 0.9s; }
+.table tbody tr:nth-child(4) { animation-delay: 1.2s; }
+.table tbody tr:nth-child(5) { animation-delay: 1.5s; }
+
+.btn-outline-primary {
+    border-radius: 50px;
+    padding: 10px 25px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-outline-primary:hover {
+    background-color: #007bff;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
